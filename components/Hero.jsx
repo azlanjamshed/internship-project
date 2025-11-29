@@ -1,9 +1,18 @@
+"use client";
+import { motion } from "framer-motion";
 export function Hero() {
   return (
     <section className="relative  min-h-[calc(100vh-4rem)] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-32 overflow-hidden">
       <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
       <div className="max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto w-full">
-        <div className="text-center space-y-8">
+      
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center space-y-8"
+        >
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground text-balance leading-tight max-w-4xl mx-auto">
             Transforming Ideas Into
@@ -32,7 +41,7 @@ export function Hero() {
               View Our Work
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Background Blur */}
