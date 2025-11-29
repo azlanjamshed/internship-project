@@ -1,52 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
+import testimonials from "../data/testimonials";
+import Title from "./Title";
 export function Testimonials() {
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CEO, TechStart",
-      content:
-        "Working with this agency transformed our online presence. Their attention to detail and creative solutions exceeded our expectations.",
-      image: "/professional-woman-ceo.png",
-    },
-    {
-      name: "Michael Chen",
-      role: "Founder, GrowthLab",
-      content:
-        "The team delivered a stunning website that perfectly captures our brand. Our conversions have increased by 150% since launch.",
-      image: "/professional-asian-man-founder.jpg",
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Marketing Director, InnovateCo",
-      content:
-        "Professional, responsive, and incredibly talented. They took our vision and brought it to life better than we could have imagined.",
-      image: "/professional-latina-woman-marketing-director.jpg",
-    },
-  ];
-
   return (
     <section className="py-16 md:py-24 bg-muted">
       <div className="container mx-auto px-4">
-        {/* <div className="text-center mb-12 md:mb-16"> */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="text-center mb-12 md:mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance">
-            What Our Clients Say
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Don't just take our word for it. Here's what our clients have to say
-            about working with us.
-          </p>
-        </motion.div>
+        <Title
+          title="What Our Clients Say"
+          details="Don't just take our word for it. Here's what our clients have to say
+            about working with us."
+        />
 
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"> */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

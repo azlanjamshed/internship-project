@@ -1,82 +1,19 @@
 "use client";
 import { Check } from "lucide-react";
 import { motion } from "framer-motion";
+import plans from "../data/plans";
+import Title from "./Title";
 
 export function Pricing() {
-  const plans = [
-    {
-      name: "Starter",
-      price: "$999",
-      period: "/month",
-      description: "Perfect for small businesses and startups",
-      features: [
-        "5-page custom website",
-        "Responsive design",
-        "Basic SEO optimization",
-        "Contact form integration",
-        "1 month support",
-        "2 rounds of revisions",
-      ],
-      popular: false,
-    },
-    {
-      name: "Professional",
-      price: "$2,499",
-      period: "/month",
-      description: "Ideal for growing businesses",
-      features: [
-        "10-page custom website",
-        "Advanced responsive design",
-        "Complete SEO optimization",
-        "CMS integration",
-        "E-commerce functionality",
-        "3 months support",
-        "Unlimited revisions",
-        "Analytics setup",
-      ],
-      popular: false,
-    },
-    {
-      name: "Enterprise",
-      price: "$4,999",
-      period: "/month",
-      description: "For large-scale projects",
-      features: [
-        "Unlimited pages",
-        "Custom web application",
-        "Advanced SEO strategy",
-        "Full CMS & e-commerce",
-        "API integrations",
-        "6 months support",
-        "Unlimited revisions",
-        "Performance optimization",
-        "Security audit",
-      ],
-      popular: false,
-    },
-  ];
-
   return (
     <section className="py-20 px-4 bg-secondary/30">
       <div className="max-w-7xl mx-auto">
-        {/* <div className="text-center mb-16"> */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="text-center mb-12 md:mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
-            Simple, Transparent Pricing
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Choose the perfect plan for your business. All plans include our
-            premium support and quality guarantee.
-          </p>
-        </motion.div>
+        <Title
+          title="Simple, Transparent Pricing"
+          details="Choose the perfect plan for your business. All plans include our
+            premium support and quality guarantee."
+        />
 
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

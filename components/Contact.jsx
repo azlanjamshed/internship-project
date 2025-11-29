@@ -2,6 +2,7 @@
 
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+import Title from "./Title";
 
 export function Contact() {
   const {
@@ -21,22 +22,12 @@ export function Contact() {
   return (
     <section className="py-20 px-4 bg-muted/30">
       <div className="container mx-auto max-w-6xl">
-        {/* <div className="text-center mb-12"> */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="text-center mb-12 md:mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance">
-            Let's Build Something Amazing Together
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Ready to transform your digital presence? Get in touch with our team
-            and let's discuss your project.
-          </p>
-        </motion.div>
+       
+        <Title
+          title="Let's Build Something Amazing Together"
+          details="Ready to transform your digital presence? Get in touch with our team
+            and let's discuss your project."
+        />
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
