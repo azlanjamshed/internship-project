@@ -51,7 +51,7 @@ export function Features() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1 }}
           viewport={{ once: true }}
           className="text-center mb-12 md:mb-16"
         >
@@ -69,7 +69,7 @@ export function Features() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 2.5 }}
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"
         >
@@ -78,7 +78,7 @@ export function Features() {
             return (
               <div
                 key={index}
-                className="flex flex-col items-start p-6 rounded-lg border border-border bg-card hover:border-primary/50 transition-colors duration-300"
+                className="flex flex-col items-start p-6 rounded-lg border border-border bg-card hover:border-primary/50  duration-300 shadow-sm hover:shadow-lg transition-all"
               >
                 {/* Icon */}
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
